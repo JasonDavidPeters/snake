@@ -30,17 +30,9 @@ public class Player extends SnakeBody {
 		}
 	}
 
-	private void death() {
+	public void death() {
 		// set coordinates to 0,0
 		// clear player
-		if (hitBounds()) {
-			setX((GameWindow.WIDTH * GameWindow.SCALE) / 2);
-			setY((GameWindow.HEIGHT * GameWindow.SCALE) / 2);
-			Keyboard.moveRight = false;
-			Keyboard.moveLeft = false;
-			Keyboard.moveDown = false;
-			Keyboard.moveUp = false;
-		}
 	}
 
 	public void tick() {
@@ -65,15 +57,14 @@ public class Player extends SnakeBody {
 	}
 
 	public boolean hitBounds() {
-		if (this.getX() + (this.getWidth() / 2) >= GameWindow.WIDTH * GameWindow.SCALE) {
+		if (getX() + (getWidth() / 2) >= GameWindow.WIDTH * GameWindow.SCALE)
 			return true;
-		} else if (this.getX() + (this.getWidth() / 2) < 0) {
+		else if (getX() + (getWidth() / 2) < 0)
 			return true;
-		} else if (this.getY() + (this.getHeight() / 2) >= GameWindow.HEIGHT * GameWindow.SCALE) {
+		else if (getY() + (getHeight() / 2) >= GameWindow.HEIGHT * GameWindow.SCALE)
 			return true;
-		} else if (this.getY() + (this.getHeight() / 2) < 0) {
+		else if (getY() + (getHeight() / 2) < 0)
 			return true;
-		}
 		return false;
 	}
 

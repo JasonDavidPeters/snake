@@ -2,7 +2,6 @@ package com.jasondavidpeters.snake.entity;
 
 import java.awt.Color;
 import java.awt.Graphics;
-import java.awt.Rectangle;
 
 import com.jasondavidpeters.snake.GameWindow;
 

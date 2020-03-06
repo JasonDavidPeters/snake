@@ -1,13 +1,11 @@
 package com.jasondavidpeters.snake;
 
 import java.awt.Canvas;
-import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Graphics;
 
 import javax.swing.JFrame;
 
-import com.jasondavidpeters.snake.entity.Player;
 import com.jasondavidpeters.snake.input.Keyboard;
 
 public class GameWindow extends Canvas {
@@ -35,7 +33,7 @@ public class GameWindow extends Canvas {
 		frame.setTitle(GAME_NAME);
 		frame.pack();
 		frame.setLocationRelativeTo(null);
-		frame.requestFocus();
+		requestFocus();
 		kb = new Keyboard();
 		addKeyListener(kb);
 
